@@ -1,0 +1,83 @@
+.freelancerCorner {
+  height: 300px;
+}
+.graphic {
+  opacity: 1;
+  animation: graphic 10s ease -1s infinite;
+}
+.graphic2 {
+  opacity: 0;
+  animation: graphic_two 10s ease -1s infinite;
+}
+.iPad2 {
+  transform-origin: 0px;
+  transform: translate(-5px, 0);
+  animation: holding 5s linear -1s infinite;
+}
+.hand2 {
+  transform: translate(0px, 0px);
+  animation: hover 5s linear -1s infinite;
+}
+.screen {
+  fill: #e6e7e8;
+  animation: ipadScreen 10s ease -1s infinite;
+}
+.screen-highlight {
+  fill: #f1f1f2;
+  animation: ipadHighlight 10s ease -1s infinite;
+}
+.hand1, .shadow {
+  transform-origin: 0px;
+  transform: translate(10px, 0);
+  animation: tap 10s ease -1s infinite;
+}
+
+@keyframes tap {
+   5% { transform: translate(-1px, 5px); }
+  15% { transform: translate(5px, -60px); }
+  30% { transform: translate(10px, 0px); }
+
+  55% { transform: translate(10px, 0px); }
+  65% { transform: translate(5px, -60px); }
+  80% { transform: translate(10px, 0px); }
+}
+
+@keyframes graphic {
+  15% { opacity: 1; }
+  20% { opacity: 0; }
+  65% { opacity: 0; }
+  70% { opacity: 1; }
+}
+
+@keyframes graphic_two {
+  15% { opacity: 0; }
+  20% { opacity: 1; }
+  65% { opacity: 1; }
+  70% { opacity: 0; }
+}
+
+@keyframes ipadScreen {
+  15% { fill: #e6e7e8; }
+  20% { fill: #FF9900; }
+  65% { fill: #FF9900; }
+  70% { fill: #e6e7e8; }
+}
+
+@keyframes ipadHighlight {
+  15% { fill: #f1f1f2; }
+  20% { fill: #FABF5E; }
+  65% { fill: #FABF5E; }
+  70% { fill: #f1f1f2; }
+}
+
+@keyframes holding {
+  16% { transform: translate(-6px, 1px); }
+  32% { transform: translate(-6px, 2px); }
+  48% { transform: translate(-5px, 3px); }
+  64% { transform: translate(-4px, 2px); }
+  80% { transform: translate(-4px, 1px); }
+}
+
+@keyframes hover {
+  50% { transform: translate(4px, 3px); }
+}

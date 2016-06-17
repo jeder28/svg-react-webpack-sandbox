@@ -1,0 +1,7 @@
+#DS_Store
+.DS_Store
+
+
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules

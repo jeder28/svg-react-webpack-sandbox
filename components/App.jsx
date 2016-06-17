@@ -6,7 +6,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>SVG Sandbox</h1>
-        <SVGComponent title='family' path='../src/svgs/Family_Icon.svg'/>
+        <SVGComponent title='freelancerCorner' path='../src/svgs/freelancerCorner.svg'/>
       </div>
     )
   }
