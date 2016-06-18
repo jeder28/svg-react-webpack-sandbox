@@ -1,5 +1,5 @@
 .freelancerCorner {
-  height: 300px;
+  background-color: #0EB5E0;
 }
 .graphic {
   opacity: 1;
@@ -69,15 +69,15 @@
   65% { fill: #FABF5E; }
   70% { fill: #f1f1f2; }
 }
+// Performance Issues with Firefox, so removing these animations
+// @keyframes holding {
+//   16% { transform: translate(-6px, 1px); }
+//   32% { transform: translate(-6px, 2px); }
+//   48% { transform: translate(-5px, 3px); }
+//   64% { transform: translate(-4px, 2px); }
+//   80% { transform: translate(-4px, 1px); }
+// }
 
-@keyframes holding {
-  16% { transform: translate(-6px, 1px); }
-  32% { transform: translate(-6px, 2px); }
-  48% { transform: translate(-5px, 3px); }
-  64% { transform: translate(-4px, 2px); }
-  80% { transform: translate(-4px, 1px); }
-}
-
-@keyframes hover {
-  50% { transform: translate(4px, 3px); }
-}
+// @keyframes hover {
+//   50% { transform: translate(4px, 3px); }
+// }
