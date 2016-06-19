@@ -9,15 +9,6 @@
   opacity: 0;
   animation: graphic_two 10s ease -1s infinite;
 }
-.iPad2 {
-  transform-origin: 0px;
-  transform: translate(-5px, 0);
-  animation: holding 5s linear -1s infinite;
-}
-.hand2 {
-  transform: translate(0px, 0px);
-  animation: hover 5s linear -1s infinite;
-}
 .screen {
   fill: #e6e7e8;
   animation: ipadScreen 10s ease -1s infinite;
@@ -69,15 +60,3 @@
   65% { fill: #FABF5E; }
   70% { fill: #f1f1f2; }
 }
-// Performance Issues with Firefox, so removing these animations
-// @keyframes holding {
-//   16% { transform: translate(-6px, 1px); }
-//   32% { transform: translate(-6px, 2px); }
-//   48% { transform: translate(-5px, 3px); }
-//   64% { transform: translate(-4px, 2px); }
-//   80% { transform: translate(-4px, 1px); }
-// }
-
-// @keyframes hover {
-//   50% { transform: translate(4px, 3px); }
-// }
