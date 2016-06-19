@@ -34,9 +34,28 @@
 .svg-dark-pink { fill:#d41c53; }
 .svg-red{fill:#a51838}
 
+.svg-light-green{fill:#56DE4E}
 .svg-med-green{fill:#29ab3a}
 .svg-dark-green{fill:#008c3b}
 
+@keyframes halfBlink {
+  10% { opacity: 0; }
+  11% { opacity: 1; }
+  12% { opacity: 1; }
+  13% { opacity: 0; }
+}
+@keyframes blink {
+  12% { opacity: 0; }
+  13% { opacity: 1; }
+  14% { opacity: 1; }
+  15% { opacity: 0; }
+}
+@keyframes openEyes {
+  10% { opacity: 1; }
+  11% { opacity: 0; }
+  14% { opacity: 0; }
+  15% { opacity: 1; }
+}
 
 
 

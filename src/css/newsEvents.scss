@@ -1,3 +1,194 @@
 .events {
   background-color: #1396cc;
 }
+
+.l_Eye, .r_Eye {
+  animation: openEyes 5s linear -1s infinite;
+  opacity: 1;
+}
+
+.l_Eye_halfBlink, .r_Eye_halfBlink {
+  animation: halfBlink 5s linear -1s infinite;
+  opacity: 0;
+}
+
+.l_EyeBlink, .r_EyeBlink {
+  animation: blink 5s linear -1s infinite;
+  opacity: 0;
+}
+
+.closedMouth {
+  animation: closedMouth 5s linear -1s infinite;
+  opacity: 1;
+}
+
+.halfOpenMouth {
+  animation: halfMouth 5s linear -1s infinite;
+  opacity: 0;
+}
+
+.openMouth {
+  animation: openMouth 5s linear -1s infinite;
+  opacity: 1;
+}
+
+.speakingLines {
+  animation: speaking 5s linear -1s infinite;
+  transform-origin: 575px 62px;
+  transform: scale(0);
+}
+
+.svg-flash {
+  r: 0;
+  opacity: 0;
+  animation: flash 5s linear 1s 8;
+}
+
+.reporter1, .reporter5 {
+  transform-origin: 50px 100px;
+  animation: hover 3s linear -1s infinite;
+  -moz-animation: none;
+}
+.reporter3 {
+  animation: hover 6s linear -2s infinite;
+  -moz-animation: none;
+}
+.reporter2, .reporter6 {
+  animation: hover_two 5s linear -2s infinite;
+  -moz-animation: none;
+}
+
+.reporter4 {
+  animation: hover_two 4s linear -3s infinite;
+  -moz-animation: none;
+}
+
+@keyframes flash {
+  12% { r: 0; opacity: 0; }
+  13% { r: 200; opacity: 0.35; }
+  18% { r: 200; opacity: 0.35; }
+  19% { r: 0; opacity: 0; }
+
+  22% { r: 0; opacity: 0; }
+  23% { r: 200; opacity: 0.35; }
+  28% { r: 200; opacity: 0.35; }
+  29% { r: 0; opacity: 0; }
+
+  72% { r: 0; opacity: 0; }
+  73% { r: 200; opacity: 0.35; }
+  78% { r: 200; opacity: 0.35; }
+  79% { r: 0; opacity: 0; }
+}
+
+@keyframes speaking {
+  12% { transform: scale(0); }
+  13% { transform: scale(1); }
+  18% { transform: scale(1); }
+  19% { transform: scale(0); }
+
+  22% { transform: scale(0); }
+  23% { transform: scale(1); }
+  28% { transform: scale(1); }
+  29% { transform: scale(0); }
+
+  32% { transform: scale(0); }
+  33% { transform: scale(1); }
+  38% { transform: scale(1); }
+  39% { transform: scale(0); }
+
+  72% { transform: scale(0); }
+  73% { transform: scale(1); }
+  78% { transform: scale(1); }
+  79% { transform: scale(0); }
+
+  82% { transform: scale(0); }
+  83% { transform: scale(1); }
+  88% { transform: scale(1); }
+  89% { transform: scale(0); }
+}
+@keyframes halfMouth {
+  10% { opacity: 0; }
+  11% { opacity: 1; }
+  12% { opacity: 1; }
+  13% { opacity: 0; }
+
+  20% { opacity: 0; }
+  21% { opacity: 1; }
+  22% { opacity: 1; }
+  23% { opacity: 0; }
+
+  30% { opacity: 0; }
+  31% { opacity: 1; }
+  32% { opacity: 1; }
+  33% { opacity: 0; }
+
+  70% { opacity: 0; }
+  71% { opacity: 1; }
+  72% { opacity: 1; }
+  73% { opacity: 0; }
+
+  80% { opacity: 0; }
+  81% { opacity: 1; }
+  82% { opacity: 1; }
+  83% { opacity: 0; }
+}
+@keyframes openMouth {
+  12% { opacity: 0; }
+  13% { opacity: 1; }
+  18% { opacity: 1; }
+  19% { opacity: 0; }
+
+  22% { opacity: 0; }
+  23% { opacity: 1; }
+  28% { opacity: 1; }
+  29% { opacity: 0; }
+
+  32% { opacity: 0; }
+  33% { opacity: 1; }
+  38% { opacity: 1; }
+  39% { opacity: 0; }
+
+  72% { opacity: 0; }
+  73% { opacity: 1; }
+  78% { opacity: 1; }
+  79% { opacity: 0; }
+
+  82% { opacity: 0; }
+  83% { opacity: 1; }
+  88% { opacity: 1; }
+  89% { opacity: 0; }
+}
+@keyframes closedMouth {
+  10% { opacity: 1; }
+  11% { opacity: 0; }
+  18% { opacity: 0; }
+  19% { opacity: 1; }
+
+  20% { opacity: 1; }
+  21% { opacity: 0; }
+  28% { opacity: 0; }
+  29% { opacity: 1; }
+
+  30% { opacity: 1; }
+  31% { opacity: 0; }
+  38% { opacity: 0; }
+  39% { opacity: 1; }
+
+  70% { opacity: 1; }
+  71% { opacity: 0; }
+  78% { opacity: 0; }
+  79% { opacity: 1; }
+
+  80% { opacity: 1; }
+  81% { opacity: 0; }
+  88% { opacity: 0; }
+  89% { opacity: 1; }
+}
+
+@keyframes hover {
+  50% { transform: translate(1px, 5px); }
+}
+
+@keyframes hover_two {
+  50% { transform: translate(-1px, 5px); }
+}
