@@ -1,3 +1,13 @@
 .gig {
   background-color: #FE6800;
 }
+
+.torso {
+  transform: rotate(-10deg);
+  transform-origin: 418px 191px;
+  animation: jammin 4s ease infinite;
+}
+
+@keyframes jammin {
+  50% { transform: rotate(10deg); }
+}

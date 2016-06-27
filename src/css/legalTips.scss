@@ -1,3 +1,49 @@
 .legal {
   background-color: #F69721
 }
+.clipboardGroup {
+  animation: popIn 3s ease-in -1s 1;
+}
+
+.check_1 { animation: check 3.5s linear -3s 1; }
+.check_2 { animation: check 3.5s linear -2.5s 1; }
+.check_3 { animation: check 3.5s linear -2s 1; }
+.check_4 { animation: check 3.5s linear -1.5s 1; }
+.check_5 { animation: check 3.5s linear -1s 1; }
+
+.halfCheck_1 { animation: halfCheck 3.5s linear -3s 1; }
+.halfCheck_2 { animation: halfCheck 3.5s linear -2.5s 1; }
+.halfCheck_3 { animation: halfCheck 3.5s linear -2s 1; }
+.halfCheck_4 { animation: halfCheck 3.5s linear -1.5s 1; }
+.halfCheck_5 { animation: halfCheck 3.5s linear -1s 1; }
+
+.quarterCheck_1 { animation: quarterCheck 3.5s linear -3s 1; }
+.quarterCheck_2 { animation: quarterCheck 3.5s linear -2.5s 1; }
+.quarterCheck_3 { animation: quarterCheck 3.5s linear -2s 1; }
+.quarterCheck_4 { animation: quarterCheck 3.5s linear -1.5s 1; }
+.quarterCheck_5 { animation: quarterCheck 3.5s linear -1s 1; }
+
+@keyframes popIn {
+  20% { transform: translateY(250px); }
+  50% { transform: translateY(-15px); }
+  60% { transform: translateY(0px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes quarterCheck {
+  0% { opacity: 0; }
+  94% { opacity: 0; }
+  96% { opacity: 1; }
+}
+
+@keyframes halfCheck {
+  0% { opacity: 0; }
+  96% { opacity: 0; }
+  98% { opacity: 1; }
+}
+
+@keyframes check {
+  0% { opacity: 0; }
+  98% { opacity: 0; }
+  100% { opacity: 1; }
+}
