@@ -22,8 +22,8 @@ class App extends React.Component {
   }
 
   render () {
+    const findWorkItem = { title: 'Finding Work', className:'findWork', path: '../src/svgs/findWork.svg'};
     const buttonTitles = [
-      { title: 'Finding Work', className: 'findWork', path: '../src/svgs/findWork.svg' },
       { title: 'Taxes, Budgeting & Pricing', className: 'pricing', path: '../src/svgs/pricing.svg' },
       { title: 'Legal & Insurance Tips', className: 'legal', path: '../src/svgs/legalTips.svg' },
       { title: 'Work-Life Balance', className: 'balance', path: '../src/svgs/workLifeBalance.svg' },
@@ -31,15 +31,27 @@ class App extends React.Component {
       { title: 'Freelancer\'s Corner', className: 'freelancerCorner', path: '../src/svgs/freelancerCorner.svg' },
       { title: 'Events & News', className: 'events', path: '../src/svgs/newsEvents.svg' }
     ];
-    let className = buttonTitles[0].className + ' svg-container active';
+    let className = findWorkItem.className + ' svg-container active';
     return (
       <div>
         <h1>SVG Sandbox</h1>
+        <div className="findWork active">
+          <div className="findWorkImgage">
+            <div className="magnifyGlass">
+              <div className="handle">
+                <div className="handle-detail"></div>
+                <div className="handle-detail-2"></div>
+                <div className="handle-detail-3"></div>
+              </div>
+              <div className="magnifiedContent">
+                <div className="inside-mag"/>
+              </div>
+            </div>
+          </div>
+        </div>
         {
           buttonTitles.map((item, i) => {
-            if (i > 0) {
-              className = item.className + ' svg-container inactive';
-            }
+            className = item.className + ' svg-container inactive';
             return (
               <div className={className} key={i}>
                 <SVGComponent path={item.path}/>
@@ -49,6 +61,7 @@ class App extends React.Component {
         }
         <div className='categories'>
           <ul>
+            <li onClick={this.handleClick.bind(this, findWorkItem)}>{findWorkItem.title}</li>
             {
               buttonTitles.map((item, i) => {
                 return (
