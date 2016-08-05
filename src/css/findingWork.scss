@@ -1,113 +1,63 @@
-$imageMagnified: '~/src/img/findWorkMagnified.png';
-$image: '~/src/img/findWork.png';
-
-.findWorkGroup {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 300px;
-}
 .findWork {
-  background-color: #11b6e2;
-  width: 100%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-}
-.findWorkImgage {
-  background: url($image) no-repeat;
-  background-position: center center;
-  height: 300px;
-  width: 100%;
+  background: #11b6e2;
 }
 .magnifyGlass {
-  position: relative;
-  margin: 0 auto;
-  width: 300px;
-  height: 300px;
-  transform: translate(-30px, 35px);
-  animation: moveMagnify 10s ease 1;
+  opacity: 1;
+  animation: moveMagnify 5s ease 1s 3;
+  transform: translateZ(0);
 }
-
-.magnifiedContent {
-  background: url($imageMagnified) no-repeat;
-  background-position: 0px;
-  animation: moveContent 10s ease 1;
-  background-size:200%;
-  border-radius: 50%;
-  border: 10px solid #BEC0BF;
-  box-shadow: 0em 0em 0 .25em #E9E9E9, inset 2px 0 10px rgba(#111,1);
-  cursor: all-scroll;
-  min-height: 175px;
-  min-width: 175px;
-  overflow: hidden;
-  position: absolute;
-  &:before {
-    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.25));
-    border-radius: 50%;
-    content: '';
-    height: 60%;
-    left: 10%;
-    position: absolute;
-    top: 4%;
-    width: 80%;
-    opacity: 0.5;
+.blurredMagnifyGlass {
+  opacity: 0;
+  filter:url(#blur___0);
+  animation: blurredMagnify 5s ease 1s 3;
+  transform: translateZ(0);
+}
+.firstFrame {
+  opacity: 1;
+  animation: firstFrame 5s ease 1s 3;
+}
+.middleFrame {
+  opacity: 0;
+  filter:url(#blur2___0);
+  animation: blurredMagnify 5s ease 1s 3;
+}
+.lastFrame {
+  opacity: 0;
+  animation: lastFrame 5s ease 1s 3;
+}
+@media only screen and (min-width: 1025px) {
+  @keyframes moveMagnify {
+    25%   { transform: translateX(0px);   opacity: 1; }
+    32.5% { opacity: 0.5; }
+    40%   { transform: translateX(115px); opacity: 1; }
+    70%   { transform: translateX(115px); opacity: 1; }
+    77.5% { opacity: 0.5; }
+    85%   { transform: translateX(0px);   opacity: 1; }
   }
-}
-
-.handle {
-  height: 125px;
-  width: 35px;
-  top: 145px;
-  left: 175px;
-  border-radius: 1em;
-  position: absolute;
-  transform: rotate(-43deg);
-}
-
-.handle-detail {
-  background-color: #BEC0BF;
-  border-radius: 15% 15% 0 0;
-  width: 90%;
-  height: 25%;
-  margin: 0 5%;
-}
-
-.handle-detail-2 {
-  background-color: #E9E9E9;
-  border-radius: 2%;
-  width: 100%;
-  height: 5%;
-}
-.handle-detail-3 {
-  border-radius: 0 0 8px 8px;
-  margin: 0 5%;
-  width: 90%;
-  height: 70%;
-  background-color: black;
-}
-
-.inside-mag {
-  position: absolute;
-  width: 96%;
-  height: 96%;
-  border: 1em solid #E9E9E9;
-  border-radius: 100%;
-  top: -12px;
-  left: -13px;
-  margin: 0;
-  padding: 0;
-}
-
-@keyframes moveMagnify {
-  // 0% { transform: translate(-90px, 30px); }
-  50% { transform: translate(100px, 35px); }
-  // 100% { transform: translate(0px, 30px); }
-}
-
-@keyframes moveContent {
-  // 0% { background-position: 0px; }
-  50% { background-position: -150px; }
-  // 100% { background-position: -150px; }
+  @keyframes firstFrame {
+    25%   { transform: translateX(0px); opacity: 1; }
+    32.5%   { opacity: 0.25; }
+    40%   { transform: translateX(115px); opacity: 0; }
+    70%   { transform: translateX(115px); }
+    77.5% { opacity: 0; }
+    85%   { transform: translateX(0px); opacity: 1; }
+  }
+  @keyframes lastFrame {
+    25%   { transform: translateX(-115px); }
+    32.5% { opacity: 0; }
+    40%   { transform: translateX(0px); opacity: 1; }
+    70%   { transform: translateX(0px); opacity: 1; }
+    77.5% { opacity: 0.25; }
+    85%   { transform: translateX(-115px); opacity: 0; }
+  }
+  @keyframes blurredMagnify {
+    25%   { transform: translateX(0px);   opacity: 0; }
+    32.5% { opacity: 1; }
+    34%   { opacity: 1; }
+    40%   { transform: translateX(115px); opacity: 0; }
+    70%   { transform: translateX(115px); opacity: 0; }
+    77.5% { opacity: 1; }
+    79%   { opacity: 1; }
+    85%   { transform: translateX(0px);   opacity: 0; }
+  }
 }
